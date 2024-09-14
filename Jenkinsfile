@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Build and Test') {
             steps {
-                bat 'mvn clean test'
+                bat 'mvn clean install'
             }
         }
         stage('Generate Allure Report') {
@@ -33,3 +33,4 @@ pipeline {
             }
         }
     }
+}
